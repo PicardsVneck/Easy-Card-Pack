@@ -37,7 +37,7 @@ public class EasyCard52URP : MonoBehaviour
     {
         this._cardDefinition = cardDefinition;
 
-        if(cardDefinition == null)
+        if (cardDefinition == null)
         {
             return;
         }

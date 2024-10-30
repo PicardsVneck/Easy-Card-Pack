@@ -55,7 +55,7 @@ public class EasyCardCollection : MonoBehaviour
     public bool CanAddCard(EasyCard card, int index)
     {
         bool canAdd = true;
-        if(collectionBehavior != null)
+        if (collectionBehavior != null)
         {
             canAdd = collectionBehavior.CanAddCard(card, index, this);
         }
@@ -72,7 +72,7 @@ public class EasyCardCollection : MonoBehaviour
     public bool CanRemoveCard(EasyCard card)
     {
         bool canRemove = true;
-        if(collectionBehavior != null)
+        if (collectionBehavior != null)
         {
             canRemove = collectionBehavior.CanRemoveCard(card, this);
         }

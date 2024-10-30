@@ -13,7 +13,7 @@ public class EasyCard52 : MonoBehaviour
     
     public void Initialize(EasyCard52Definition cardDefinition)
     {
-        if(cardDefinition == null)
+        if (cardDefinition == null)
         {
             return;
         }

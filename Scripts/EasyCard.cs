@@ -31,7 +31,7 @@ public class EasyCard : MonoBehaviour, IPointerDownHandler
 
     public void MoveTo(Vector3 position, Quaternion rotation)
     {
-        if(_cardAnimator == null)
+        if (_cardAnimator == null)
         {
             SetTransform(position, rotation);
             return;

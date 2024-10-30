@@ -11,7 +11,7 @@ public class EasyCardSimpleAnimator : EasyCardAnimator
 
     private void LateUpdate()
     {
-        if(_isAnimating)
+        if (_isAnimating)
         {
             Move();
         }
@@ -31,7 +31,7 @@ public class EasyCardSimpleAnimator : EasyCardAnimator
 
     private void Move()
     {
-        if(_timeAnimating >= _animationTime)
+        if (_timeAnimating >= _animationTime)
         {
             transform.position = _targetPosition;
             transform.rotation = _targetRotation;

@@ -49,12 +49,12 @@ public class EasyCardDragAndDrop : EasyCardEventHandler
         EasyCard clickedCard = hits.hitCards[0];
 
         originalCardCollection = clickedCard.Collection;
-        if(originalCardCollection == null)
+        if (originalCardCollection == null)
         {
             return;
         }
 
-        if(originalCardCollection.multiCardSelect)
+        if (originalCardCollection.multiCardSelect)
         {
             if (!originalCardCollection.CanRemoveCard(clickedCard))
             {
@@ -105,7 +105,7 @@ public class EasyCardDragAndDrop : EasyCardEventHandler
             EasyCardEvents.OnDrop(dragCards, newCardCollection, originalCardCollection);
         }
         
-        if(dragCards[0].Collection == null)
+        if (dragCards[0].Collection == null)
         {
             ReturnCard();
         }
