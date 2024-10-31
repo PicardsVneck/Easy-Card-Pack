@@ -1,5 +1,5 @@
 using UnityEngine;
-using EasyCard.Deck52;
+using EasyCard.Playing;
 
 namespace EasyCard.Solitaire
 {
@@ -13,7 +13,7 @@ public class SolitaireFoundationBehavior : EasyCardCollectionBehavior
         }
 
         EasyCard topCard = collection.GetTopCard();
-        EasyCard52URP card52 = card.GetComponent<EasyCard52URP>();
+        EasyPlayingCardURP card52 = card.GetComponent<EasyPlayingCardURP>();
 
         if(!topCard)
         {
@@ -24,7 +24,7 @@ public class SolitaireFoundationBehavior : EasyCardCollectionBehavior
             return false;
         }
 
-        EasyCard52URP topCard52 = topCard.GetComponent<EasyCard52URP>();
+        EasyPlayingCardURP topCard52 = topCard.GetComponent<EasyPlayingCardURP>();
         
         bool isCardNextRank = topCard52.rank + 1 == card52.rank;
         bool isSameSuit = card52.suit == topCard52.suit;

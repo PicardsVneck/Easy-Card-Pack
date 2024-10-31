@@ -29,7 +29,6 @@ public class SolitaireGameManager : EasyCardEventHandler
             for (int j = i; j <= 6; j++)
             {
                 EasyCard card = _deck.GetTopCard();
-                Debug.Log(card);
                 if (j == i)
                 {
                     _deck.RemoveCard(card, force: true);

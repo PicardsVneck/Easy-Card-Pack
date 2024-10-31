@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using EasyCard.Deck52;
 using UnityEngine;
 
 namespace EasyCard
@@ -7,7 +6,7 @@ namespace EasyCard
 
 public class EasyCardDeckPopulator : MonoBehaviour
 {
-    public EasyCard52DeckDefinition deckDefinition;
+    public EasyCardDeckDefinition deckDefinition;
     public bool shuffled = true;
 
     private void Awake()
