@@ -9,7 +9,6 @@ public class EasyCard52DeckDefinition : ScriptableObject, IEasyCardDeckDefinitio
 {
     public List<EasyCard52Definition> cardDefinitions;
     public EasyCard cardPrefab;
-    public Material cardBackMaterial { get; internal set; }
 
     public List<EasyCard> buildDeck()
     {

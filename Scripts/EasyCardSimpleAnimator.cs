@@ -5,7 +5,6 @@ namespace EasyCard
 public class EasyCardSimpleAnimator : EasyCardAnimator
 {
     [SerializeField] AnimationCurve _moveCurve = AnimationCurve.Linear(0, 0, 1, 1);
-    [SerializeField] private float _animationSpeed = 1;
     [SerializeField] private float _animationTime = 1;
     private float _timeAnimating;
 
@@ -22,7 +21,6 @@ public class EasyCardSimpleAnimator : EasyCardAnimator
 
         _timeAnimating = Time.deltaTime;
         _isAnimating = true;
-        //animationTime = Vector3.Distance(transform.position, position) / animationSpeed;
         _targetPosition = targetPosition;
         _targetRotation = targetRotation;
         _originalPosition = card.transform.position;
