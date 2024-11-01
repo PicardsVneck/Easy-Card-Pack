@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace EasyCard
+namespace EasyCardPack
 {
 
 public abstract class EasyCardEventHandler : MonoBehaviour

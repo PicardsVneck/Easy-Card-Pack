@@ -4,8 +4,10 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
 
-namespace EasyCard.Solitaire
+namespace EasyCardPack.Solitaire
 {
+
+[AddComponentMenu("Easy Card Pack/Solitaire/Game Manager")]
 public class SolitaireGameManager : EasyCardEventHandler
 {
     [SerializeField] private EasyCardCollection _deck;

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace EasyCard
+namespace EasyCardPack
 {
 
 public class EasyCardEventHits
@@ -9,6 +9,8 @@ public class EasyCardEventHits
     public List<EasyCard> hitCards = new List<EasyCard>();
     public List<EasyCardCollection> hitCollections = new List<EasyCardCollection>();
 }
+
+[AddComponentMenu("Easy Card Pack/Event System")]
 public class EasyCardEventSystem : MonoBehaviour
 {
     EasyCardEventHits hits = new EasyCardEventHits();

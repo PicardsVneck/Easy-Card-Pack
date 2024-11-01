@@ -1,7 +1,8 @@
 using UnityEngine;
 
-namespace EasyCard
+namespace EasyCardPack
 {
+[AddComponentMenu("Easy Card Pack/Card Animators/Simple Animator")]
 public class EasyCardSimpleAnimator : EasyCardAnimator
 {
     [SerializeField] AnimationCurve _moveCurve = AnimationCurve.Linear(0, 0, 1, 1);

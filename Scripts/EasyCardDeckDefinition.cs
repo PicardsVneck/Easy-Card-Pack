@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace EasyCard
+namespace EasyCardPack
 {
 
 [CreateAssetMenu(fileName = "DeckDefinition", menuName = "Easy Card Pack/Deck Definition", order = 1)]

@@ -1,9 +1,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace EasyCard
+namespace EasyCardPack
 {
 
+[RequireComponent(typeof(EasyCardEventSystem))]
+[AddComponentMenu("Easy Card Pack/Drag-and-Drop Manager")]
 public class EasyCardDragAndDrop : EasyCardEventHandler
 {
     public Vector3 interactionPlaneNormal = Vector3.forward;

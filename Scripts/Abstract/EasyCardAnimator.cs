@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace EasyCard
+namespace EasyCardPack
 {
 public abstract class EasyCardAnimator: MonoBehaviour
 {

@@ -1,9 +1,10 @@
 using UnityEngine;
 
-namespace EasyCard.Playing
+namespace EasyCardPack.Playing
 {
 
 [RequireComponent(typeof(EasyCard))]
+[AddComponentMenu("Easy Card Pack/Playing Card")]
 public class EasyPlayingCardURP : MonoBehaviour
 {   
     [Header("Card Definition")]

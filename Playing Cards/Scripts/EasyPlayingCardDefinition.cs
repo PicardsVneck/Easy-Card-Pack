@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace EasyCard.Playing
+namespace EasyCardPack.Playing
 {
 
 public enum Rank

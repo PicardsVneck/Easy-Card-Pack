@@ -1,8 +1,10 @@
 using UnityEngine;
-using EasyCard.Playing;
+using EasyCardPack.Playing;
 
-namespace EasyCard.Solitaire
+namespace EasyCardPack.Solitaire
 {
+
+[AddComponentMenu("Easy Card Pack/Solitaire/Foundation Behavior")]
 public class SolitaireFoundationBehavior : EasyCardCollectionBehavior
 {
     public override bool CanAddCard(EasyCard card, int index, EasyCardCollection collection)

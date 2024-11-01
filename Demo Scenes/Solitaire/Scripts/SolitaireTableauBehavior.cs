@@ -1,7 +1,10 @@
-using EasyCard.Playing;
+using UnityEngine;
+using EasyCardPack.Playing;
 
-namespace EasyCard.Solitaire
+namespace EasyCardPack.Solitaire
 {
+
+[AddComponentMenu("Easy Card Pack/Solitaire/Tableau Behavior")]
 public class SolitaireTableauBehavior : EasyCardCollectionBehavior
 {
     public override bool CanAddCard(EasyCard card, int index, EasyCardCollection collection)

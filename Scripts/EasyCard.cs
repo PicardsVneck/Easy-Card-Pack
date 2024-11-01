@@ -1,8 +1,10 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace EasyCard
+namespace EasyCardPack
 {
+
+[AddComponentMenu("Easy Card Pack/Easy Card")]
 public class EasyCard : MonoBehaviour, IPointerDownHandler
 {
     [HideInInspector] public EasyCardCollection Collection;

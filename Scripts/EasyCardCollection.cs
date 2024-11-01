@@ -2,10 +2,11 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-namespace EasyCard
+namespace EasyCardPack
 {
 
 [ExecuteAlways]
+[AddComponentMenu("Easy Card Pack/Easy Card Collection")]
 public class EasyCardCollection : MonoBehaviour
 {
     [Header("Display")]

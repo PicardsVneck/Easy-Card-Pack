@@ -1,7 +1,8 @@
 using UnityEngine;
 
-namespace EasyCard
+namespace EasyCardPack
 {
+    
 public abstract class EasyCardCollectionBehavior : MonoBehaviour
 {
     public abstract bool CanAddCard(EasyCard card, int index, EasyCardCollection collection);

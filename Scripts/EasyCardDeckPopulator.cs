@@ -1,9 +1,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace EasyCard
+namespace EasyCardPack
 {
 
+[AddComponentMenu("Easy Card Pack/Deck Populator")]
 public class EasyCardDeckPopulator : MonoBehaviour
 {
     public EasyCardDeckDefinition deckDefinition;
