@@ -87,7 +87,7 @@ public class EasyCardCollection : MonoBehaviour
 
     }
 
-    public void AddCard(EasyCard card, int index, bool force = false, bool instantanious = false)
+    public bool AddCard(EasyCard card, int index, bool force = false, bool instantanious = false)
     {
 
         if (onlyAddTopCard && !force)
@@ -97,7 +97,7 @@ public class EasyCardCollection : MonoBehaviour
 
         if (!CanAddCard(card, index) && !force)
         {
-            return;
+            return false;
         }
 
         cards.Insert(index, card);
@@ -106,31 +106,31 @@ public class EasyCardCollection : MonoBehaviour
 
         UpdateCardPositions(instantanious);
         EasyCardEvents.OnCardAdded(card, this);
+        return true;
     }
 
-    public void AddCard(EasyCard card, bool force = false, bool instantanious = false)
+    public bool AddCard(EasyCard card, bool force = false, bool instantanious = false)
     {
-        AddCard(card, cards.Count, force, instantanious);
+        return AddCard(card, cards.Count, force, instantanious);
     }
 
-    public void RemoveCard(EasyCard card, bool force = false, bool instantanious = false)
+    public EasyCard RemoveCard(EasyCard card, bool force = false, bool instantanious = false)
     {
         if (!CanRemoveCard(card) && !force)
         {
-            return;
+            return null;
         }
         cards.Remove(card);
         card.Collection = null;
 
         UpdateCardPositions(instantanious);
         EasyCardEvents.OnCardRemoved(card, this);
+        return card;
     }
 
     public EasyCard RemoveCardAt(int index, bool force = false)
     {
-        EasyCard card = GetCard(index);
-        RemoveCard(card, force);
-        return card;
+        return RemoveCard(GetCard(index), force);
     }
 
     public int GetClosestCardIndexByPosition(Vector3 position)

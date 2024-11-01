@@ -22,7 +22,7 @@ public class EasyCardEventSystem : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             hits = RayCastForCards();
-            if (hits.hitCards.Count != 0 && hits.hitCollections.Count != 0)
+            if (hits.hitCards.Count != 0 || hits.hitCollections.Count != 0)
             {
                 EasyCardEvents.OnClicked(hits);
                 hasClicked = true;
