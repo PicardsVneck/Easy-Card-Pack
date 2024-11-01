@@ -117,7 +117,6 @@ public class EasyCardDragAndDrop : EasyCardEventHandler
 
     private void ReturnCard()
     {
-        Debug.Log("Return Card");
         if (originalCardCollection != null)
         {
             for (int i = 0; i < dragCards.Count; i++)
