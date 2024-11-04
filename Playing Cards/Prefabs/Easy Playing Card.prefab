@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 1286425107430560284}
   - component: {fileID: 4767076823983666116}
   - component: {fileID: 8143008739638514048}
-  - component: {fileID: 311945126465460258}
   m_Layer: 0
   m_Name: Easy Playing Card
   m_TagString: Untagged
@@ -71,7 +70,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Collection: {fileID: 0}
-  _cardAnimator: {fileID: 311945126465460258}
+  _cardAnimator: {fileID: 4767076823983666116}
 --- !u!114 &4767076823983666116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -131,18 +130,6 @@ MonoBehaviour:
   _backOutlineRenderer: {fileID: 5149826536067811109}
   outlineMaterial: {fileID: 2100000, guid: 4a30da2b360e15f40a67b1aa9057226e, type: 2}
   outlineWidth: 0.02
---- !u!114 &311945126465460258
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1719828783534252632}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 929a3bcf34dba6545beb1230c2b1183c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &3041586109864100265
 GameObject:
   m_ObjectHideFlags: 0

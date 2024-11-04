@@ -180,7 +180,11 @@ public class EasyCardCollection : MonoBehaviour
                 cards[i].MoveTo(position, rotation);
             }
 
-            if (onlyShowTopCard && i < cards.Count - 1)
+            if (onlyShowTopCard && i < cards.Count - 2)
+            {
+                cards[i].gameObject.SetActive(false);
+            }
+            else if(onlyShowTopCard && i == cards.Count - 2 && Vector3.Distance(cards[i].transform.position, cards[i + 1].transform.position) < .01f)
             {
                 cards[i].gameObject.SetActive(false);
             }
