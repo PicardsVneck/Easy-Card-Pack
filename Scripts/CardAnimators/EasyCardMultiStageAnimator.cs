@@ -2,8 +2,8 @@ using UnityEngine;
 
 namespace EasyCardPack
 {
-[AddComponentMenu("Easy Card Pack/Card Animators/Simple Animator")]
-public class EasyCardSimpleAnimator : EasyCardAnimator
+[AddComponentMenu("Easy Card Pack/Card Animators/Multi-Stage Animator")]
+public class EasyCardMultiStageAnimator : EasyCardAnimator
 {
     [SerializeField] AnimationCurve _moveCurve = AnimationCurve.Linear(0, 0, 1, 1);
     [SerializeField] private float _animationTime = 1;

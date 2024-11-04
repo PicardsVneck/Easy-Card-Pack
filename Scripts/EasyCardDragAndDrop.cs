@@ -49,13 +49,17 @@ public class EasyCardDragAndDrop : EasyCardEventHandler
         dragCards.Clear();
         dragCardOffsets.Clear();
 
+        if (hits.hitCards.Count == 0)
+        {
+            return;
+        }
+
         EasyCard clickedCard = hits.hitCards[0];
         originalCardCollection = clickedCard.Collection;
 
         if (originalCardCollection == null)
         {
-            Debug.Log(clickedCard.name + " is not in a collection.");
-            PickupCard(null, clickedCard, clickedCard, 0);
+            PickupCard(null, clickedCard, clickedCard.transform.position, 0);
             return;
         }
 
@@ -69,7 +73,12 @@ public class EasyCardDragAndDrop : EasyCardEventHandler
 
         for (int i = originalIndex; i < endIndex; i++)
         {
-            PickupCard(originalCardCollection, null, clickedCard, originalIndex);
+            PickupCard(originalCardCollection, null, clickedCard.transform.position, i);
+        }
+
+        for (int i = originalIndex; i < endIndex; i++)
+        {
+            originalCardCollection.RemoveCardAt(originalIndex);
         }
 
         EasyCardEvents.OnDrag(dragCards, originalCardCollection);
@@ -82,45 +91,57 @@ public class EasyCardDragAndDrop : EasyCardEventHandler
         {
             return;
         }
-        
+
+        if(hits.hitCollections.Count == 0)
+        {
+            ReturnCards();
+            return;
+        }
+
         if (hits.hitCollections.Count != 0)
         {
             EasyCardCollection newCardCollection = hits.hitCollections[0];
             int addCardIndex = newCardCollection.GetClosestCardIndexByPosition(dragCards[0].transform.position);
+            bool canAddAllCards = true;
+
+            EasyCardEvents.OnDrop(dragCards, newCardCollection, originalCardCollection);
             for (int i = 0; i < dragCards.Count; i++)
             {
-                EasyCard card = dragCards[i];
-                bool wasAdded = newCardCollection.AddCard(card, i + addCardIndex);
-                if (!wasAdded)
+                bool canAddCard = newCardCollection.AddCard(dragCards[i], i + addCardIndex);
+                if(!canAddCard)
                 {
-                    ReturnCard(card);
+                    canAddAllCards = false;
                 }
             }
-            EasyCardEvents.OnDrop(dragCards, newCardCollection, originalCardCollection);
+
+            if (!canAddAllCards)
+            {
+                ReturnCards();
+            }
+
+            dragCards.Clear();
+
         }
         
-        if (dragCards[0].Collection == null)
-        {
-            ReturnCards();
-        }
-        
-        dragCards.Clear();
     }
 
-    private void PickupCard(EasyCardCollection collection, EasyCard card, EasyCard clickedCard, int index)
+    private void PickupCard(EasyCardCollection collection, EasyCard card, Vector3 clickedCardPosition, int index)
     {
-        if(collection != null)
+        if(collection == null)
         {
-            card = collection.RemoveCardAt(index);
-        }
-
-        if(card == null)
-        {
+            originalCardCollection = null;
+            dragCardOffsets.Add(Vector3.zero);
+            dragCards.Add(card);
             return;
         }
 
-        dragCards.Add(card);
-        dragCardOffsets.Add(card.transform.position - clickedCard.transform.position);
+        card = collection.GetCard(index);
+        if(collection.CanRemoveCard(card))
+        {
+            dragCardOffsets.Add(card.transform.position - clickedCardPosition);
+            dragCards.Add(card);
+            return;
+        }
     }
 
     private void ReturnCards()
@@ -144,7 +165,12 @@ public class EasyCardDragAndDrop : EasyCardEventHandler
         {
             return;
         }
+        if(card.Collection != null)
+        {
+            card.Collection.RemoveCard(card);
+        }
         originalCardCollection.AddCard(card, originalIndex, force : true);
+        originalIndex++;
     }
 }
 
