@@ -6,6 +6,8 @@ namespace EasyCardPack
 
 public delegate void OnEasyCardClicked(EasyCardEventHits hits);
 public delegate void OnEasyCardReleased(EasyCardEventHits hits);
+public delegate void OnHoverEnter(EasyCard card);
+public delegate void OnHoverExit(EasyCard card);
 public delegate void OnEasyCardDrag(List<EasyCard> cards, EasyCardCollection collection);
 public delegate void OnEasyCardDrop(List<EasyCard> cards, EasyCardCollection collection, EasyCardCollection originalCollection);
 public delegate void OnEasyCardAdded(EasyCard card, EasyCardCollection collection);
@@ -15,6 +17,8 @@ public class EasyCardEvents
 {
     public static event OnEasyCardClicked OnClickedEvent;
     public static event OnEasyCardReleased OnReleasedEvent;
+    public static event OnHoverEnter OnHoverEnterEvent;
+    public static event OnHoverExit OnHoverExitEvent;
     public static event OnEasyCardDrag OnDragEvent;
     public static event OnEasyCardDrop OnDropEvent;
     public static event OnEasyCardAdded OnCardAddedEvent;
@@ -28,6 +32,16 @@ public class EasyCardEvents
     public static void OnReleased(EasyCardEventHits hits)
     {
         OnReleasedEvent?.Invoke(hits);
+    }
+
+    public static void OnHoverEnter(EasyCard card)
+    {
+        OnHoverEnterEvent?.Invoke(card);
+    }
+
+    public static void OnHoverExit(EasyCard card)
+    {
+        OnHoverExitEvent?.Invoke(card);
     }
 
     public static void OnDrag(List<EasyCard> cards, EasyCardCollection collection)

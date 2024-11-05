@@ -10,6 +10,8 @@ public abstract class EasyCardEventHandler : MonoBehaviour
     {
         EasyCardEvents.OnClickedEvent += OnCardClicked;
         EasyCardEvents.OnReleasedEvent += OnCardReleased;
+        EasyCardEvents.OnHoverEnterEvent += OnCardHoverEnter;
+        EasyCardEvents.OnHoverExitEvent += OnCardHoverExit;
         EasyCardEvents.OnDragEvent += OnCardDrag;
         EasyCardEvents.OnDropEvent += OnCardDrop;
         EasyCardEvents.OnCardAddedEvent += OnCardAdded;
@@ -21,6 +23,8 @@ public abstract class EasyCardEventHandler : MonoBehaviour
     {
         EasyCardEvents.OnClickedEvent -= OnCardClicked;
         EasyCardEvents.OnReleasedEvent -= OnCardReleased;
+        EasyCardEvents.OnHoverEnterEvent -= OnCardHoverEnter;
+        EasyCardEvents.OnHoverExitEvent -= OnCardHoverExit;
         EasyCardEvents.OnDragEvent -= OnCardDrag;
         EasyCardEvents.OnDropEvent -= OnCardDrop;
         EasyCardEvents.OnCardAddedEvent -= OnCardAdded;
@@ -29,6 +33,8 @@ public abstract class EasyCardEventHandler : MonoBehaviour
 
     protected virtual void OnCardClicked(EasyCardEventHits hits){}
     protected virtual void OnCardReleased(EasyCardEventHits hits){}
+    protected virtual void OnCardHoverEnter(EasyCard card){}
+    protected virtual void OnCardHoverExit(EasyCard card){}
     protected virtual void OnCardDrag(List<EasyCard> card, EasyCardCollection collection){}
     protected virtual void OnCardDrop(List<EasyCard> card, EasyCardCollection collection, EasyCardCollection originalCollection){}
     protected virtual void OnCardAdded(EasyCard card, EasyCardCollection collection){}

@@ -182,132 +182,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactionPlaneNormal: {x: 0, y: 0, z: 1}
   interactionPlanePosition: {x: 0, y: 0, z: -2}
---- !u!21 &204592032
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Easy Playing Card Surface(Clone)
-  m_Shader: {fileID: -6465566751694194690, guid: c0f64fa03668f1e4ca9d4bcdbce7f0c9,
-    type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _Background_Texture:
-        m_Texture: {fileID: 2800000, guid: c6675b355c3ec4b43bae9812af5bc805, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _BaseMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _BumpMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailAlbedoMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailMask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailNormalMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _EmissionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: f4c9f5601d2dc0b41aa9ee99aa2d83e1, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _OcclusionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ParallaxMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _SpecGlossMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_Lightmaps:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_LightmapsInd:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_ShadowMasks:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _AlphaClip: 0
-    - _AlphaToMask: 0
-    - _Blend: 0
-    - _BlendModePreserveSpecular: 1
-    - _BumpScale: 1
-    - _ClearCoatMask: 0
-    - _ClearCoatSmoothness: 0
-    - _Cull: 2
-    - _Cutoff: 0.5
-    - _DetailAlbedoMapScale: 1
-    - _DetailNormalMapScale: 1
-    - _DstBlend: 0
-    - _DstBlendAlpha: 0
-    - _EnvironmentReflections: 1
-    - _GlossMapScale: 0
-    - _Glossiness: 0
-    - _GlossyReflections: 0
-    - _Metallic: 0
-    - _OcclusionStrength: 1
-    - _Parallax: 0.005
-    - _QueueControl: 0
-    - _QueueOffset: 0
-    - _ReceiveShadows: 1
-    - _Smoothness: 0.5
-    - _SmoothnessTextureChannel: 0
-    - _SpecularHighlights: 1
-    - _SrcBlend: 1
-    - _SrcBlendAlpha: 1
-    - _Surface: 0
-    - _WorkflowMode: 1
-    - _ZWrite: 1
-    m_Colors:
-    - _Background_Color: {r: 0.90588236, g: 0.8862745, b: 0.87058824, a: 1}
-    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Offset: {r: 0.076915, g: 0.6, b: 0, a: 0}
-    - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _Tiling: {r: 0.07692307, g: 0.2, b: 0, a: 0}
-  m_BuildTextureStacks: []
 --- !u!1001 &256684577
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -380,6 +254,11 @@ PrefabInstance:
         type: 3}
       propertyPath: onlyAddTopCard
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6880750865195166167, guid: 0e761a974a4500b45984e442ac08f63b,
+        type: 3}
+      propertyPath: multiCardSelect
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -714,6 +593,11 @@ PrefabInstance:
       propertyPath: onlyAddTopCard
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6880750865195166167, guid: 0e761a974a4500b45984e442ac08f63b,
+        type: 3}
+      propertyPath: multiCardSelect
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -837,7 +721,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 204592032}
+      objectReference: {fileID: 1592495033}
+    - target: {fileID: 1248203109810277177, guid: 73a273aadd3456e4cb3f8836d85ae5be,
+        type: 3}
+      propertyPath: m_Name
+      value: Highlight Backdrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1694218902504120716, guid: 73a273aadd3456e4cb3f8836d85ae5be,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4a30da2b360e15f40a67b1aa9057226e, type: 2}
     - target: {fileID: 1719828783534252632, guid: 73a273aadd3456e4cb3f8836d85ae5be,
         type: 3}
       propertyPath: m_Name
@@ -848,11 +742,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3717293094102607588, guid: 73a273aadd3456e4cb3f8836d85ae5be,
+        type: 3}
+      propertyPath: _highlightBackground
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4843389509360307722, guid: 73a273aadd3456e4cb3f8836d85ae5be,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 905786928}
+      objectReference: {fileID: 843563094}
     - target: {fileID: 6006831633822349914, guid: 73a273aadd3456e4cb3f8836d85ae5be,
         type: 3}
       propertyPath: m_Enabled
@@ -906,6 +805,41 @@ PrefabInstance:
     - target: {fileID: 6101073494498108285, guid: 73a273aadd3456e4cb3f8836d85ae5be,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6352040253082021542, guid: 73a273aadd3456e4cb3f8836d85ae5be,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.0280095
+      objectReference: {fileID: 0}
+    - target: {fileID: 6352040253082021542, guid: 73a273aadd3456e4cb3f8836d85ae5be,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.0200492
+      objectReference: {fileID: 0}
+    - target: {fileID: 6569339545754192956, guid: 73a273aadd3456e4cb3f8836d85ae5be,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6652907400151756029, guid: 73a273aadd3456e4cb3f8836d85ae5be,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6861615266545232200, guid: 73a273aadd3456e4cb3f8836d85ae5be,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.0280095
+      objectReference: {fileID: 0}
+    - target: {fileID: 6861615266545232200, guid: 73a273aadd3456e4cb3f8836d85ae5be,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.0200492
+      objectReference: {fileID: 0}
+    - target: {fileID: 9124454988319371350, guid: 73a273aadd3456e4cb3f8836d85ae5be,
+        type: 3}
+      propertyPath: m_ApplyActiveColorSpace
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -962,7 +896,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1635729054}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!21 &905786928
+--- !u!21 &843563094
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
@@ -1088,7 +1022,7 @@ Material:
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _Tiling: {r: 0.07692307, g: 0.2, b: 0, a: 0}
   m_BuildTextureStacks: []
---- !u!21 &910972562
+--- !u!21 &952260448
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
@@ -1210,7 +1144,133 @@ Material:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Offset: {r: 0.30766, g: 0, b: 0, a: 0}
+    - _Offset: {r: 0, g: 0.4, b: 0, a: 0}
+    - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _Tiling: {r: 0.07692307, g: 0.2, b: 0, a: 0}
+  m_BuildTextureStacks: []
+--- !u!21 &1592495033
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Easy Playing Card Surface(Clone)
+  m_Shader: {fileID: -6465566751694194690, guid: c0f64fa03668f1e4ca9d4bcdbce7f0c9,
+    type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Background_Texture:
+        m_Texture: {fileID: 2800000, guid: c6675b355c3ec4b43bae9812af5bc805, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BaseMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: f4c9f5601d2dc0b41aa9ee99aa2d83e1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SpecGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AlphaClip: 0
+    - _AlphaToMask: 0
+    - _Blend: 0
+    - _BlendModePreserveSpecular: 1
+    - _BumpScale: 1
+    - _ClearCoatMask: 0
+    - _ClearCoatSmoothness: 0
+    - _Cull: 2
+    - _Cutoff: 0.5
+    - _DetailAlbedoMapScale: 1
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _DstBlendAlpha: 0
+    - _EnvironmentReflections: 1
+    - _GlossMapScale: 0
+    - _Glossiness: 0
+    - _GlossyReflections: 0
+    - _Metallic: 0
+    - _OcclusionStrength: 1
+    - _Parallax: 0.005
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    - _ReceiveShadows: 1
+    - _Smoothness: 0.5
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _SrcBlendAlpha: 1
+    - _Surface: 0
+    - _WorkflowMode: 1
+    - _ZWrite: 1
+    m_Colors:
+    - _Background_Color: {r: 0.90588236, g: 0.8862745, b: 0.87058824, a: 1}
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _Offset: {r: 0, g: 0.4, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _Tiling: {r: 0.07692307, g: 0.2, b: 0, a: 0}
   m_BuildTextureStacks: []
@@ -1248,7 +1308,7 @@ Transform:
   - {fileID: 832575519}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!21 &1857082954
+--- !u!21 &1772547362
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
@@ -1370,7 +1430,7 @@ Material:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Offset: {r: 0.076915, g: 0.6, b: 0, a: 0}
+    - _Offset: {r: 0.30766, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _Tiling: {r: 0.07692307, g: 0.2, b: 0, a: 0}
   m_BuildTextureStacks: []
@@ -1453,11 +1513,6 @@ PrefabInstance:
     - target: {fileID: 4990692960598198839, guid: e9ee7f333ab4b5044aae10da5edf9930,
         type: 3}
       propertyPath: onlyShowTopCard
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4990692960598198839, guid: e9ee7f333ab4b5044aae10da5edf9930,
-        type: 3}
-      propertyPath: cardPositionOffest.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8380298845085309163, guid: e9ee7f333ab4b5044aae10da5edf9930,
@@ -1602,6 +1657,11 @@ PrefabInstance:
     - target: {fileID: 6880750865195166167, guid: 0e761a974a4500b45984e442ac08f63b,
         type: 3}
       propertyPath: onlyAddTopCard
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6880750865195166167, guid: 0e761a974a4500b45984e442ac08f63b,
+        type: 3}
+      propertyPath: multiCardSelect
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

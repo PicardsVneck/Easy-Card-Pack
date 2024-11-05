@@ -10,6 +10,7 @@ public class EasyCard : MonoBehaviour, IPointerDownHandler
     [HideInInspector] public EasyCardCollection Collection;
 
     [SerializeField] private EasyCardAnimator _cardAnimator;
+    [SerializeField] private EasyCardHighlighter _cardHighlighter;
 
     public void Awake()
     {
@@ -49,7 +50,7 @@ public class EasyCard : MonoBehaviour, IPointerDownHandler
 
     public void EnableHighLight(bool enabled)
     {
-
+        _cardHighlighter?.Highlight(enabled);
     }
 }
 

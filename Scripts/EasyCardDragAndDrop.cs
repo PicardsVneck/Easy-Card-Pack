@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using UnityEngine;
 
 namespace EasyCardPack
@@ -10,6 +11,7 @@ public class EasyCardDragAndDrop : EasyCardEventHandler
 {
     public Vector3 interactionPlaneNormal = Vector3.forward;
     public Vector3 interactionPlanePosition = Vector3.zero;
+
     private List<EasyCard> dragCards = null;
     private List<Vector3> dragCardOffsets = null;
     private EasyCardCollection originalCardCollection = null;
@@ -33,6 +35,7 @@ public class EasyCardDragAndDrop : EasyCardEventHandler
         foreach (EasyCard card in dragCards)
         {
             card.MoveTo(GetMousePositionInteractionPlane() + dragCardOffsets[dragCards.IndexOf(card)], Quaternion.identity);
+            card.EnableHighLight(true);
         }
     }
 
@@ -108,6 +111,7 @@ public class EasyCardDragAndDrop : EasyCardEventHandler
             for (int i = 0; i < dragCards.Count; i++)
             {
                 bool canAddCard = newCardCollection.AddCard(dragCards[i], i + addCardIndex);
+                dragCards[i].EnableHighLight(false);
                 if(!canAddCard)
                 {
                     canAddAllCards = false;
@@ -125,6 +129,57 @@ public class EasyCardDragAndDrop : EasyCardEventHandler
         
     }
 
+    protected override void OnCardHoverEnter(EasyCard card)
+    {
+        
+        EasyCardCollection collection = card.Collection;
+
+        if(collection == null)
+        {
+            card.EnableHighLight(true);
+            return;
+        } 
+
+        if(collection.multiCardSelect)
+        {
+            int index = collection.GetCardIndex(card);
+            for (int i = index; i < collection.cards.Count; i++)
+            {
+                collection.GetCard(i).EnableHighLight(true);
+            }
+            return;
+        }
+
+        if(collection.canRemoveCards && collection.onlyRemoveTopCard && collection.GetTopCard() == card)
+        {
+            collection.GetTopCard().EnableHighLight(true);
+            return;
+        }
+        
+        if(collection.canRemoveCards && !collection.onlyRemoveTopCard)
+        {
+            card.EnableHighLight(true);
+            return;
+        }
+        
+    }
+
+    protected override void OnCardHoverExit(EasyCard card)
+    {
+        EasyCardCollection collection = card.Collection;
+
+        if(collection == null)
+        {
+            card.EnableHighLight(false);
+            return;
+        } 
+
+        foreach (EasyCard c in collection.cards)
+        {
+            c.EnableHighLight(false);
+        }
+    }
+
     private void PickupCard(EasyCardCollection collection, EasyCard card, Vector3 clickedCardPosition, int index)
     {
         if(collection == null)
@@ -132,6 +187,7 @@ public class EasyCardDragAndDrop : EasyCardEventHandler
             originalCardCollection = null;
             dragCardOffsets.Add(Vector3.zero);
             dragCards.Add(card);
+            card.EnableHighLight(true);
             return;
         }
 
@@ -140,6 +196,7 @@ public class EasyCardDragAndDrop : EasyCardEventHandler
         {
             dragCardOffsets.Add(card.transform.position - clickedCardPosition);
             dragCards.Add(card);
+            card.EnableHighLight(true);
             return;
         }
     }
@@ -168,6 +225,7 @@ public class EasyCardDragAndDrop : EasyCardEventHandler
         if(card.Collection != null)
         {
             card.Collection.RemoveCard(card);
+            card.EnableHighLight(false);
         }
         originalCardCollection.AddCard(card, originalIndex, force : true);
         originalIndex++;

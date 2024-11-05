@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace EasyCardPack
@@ -13,9 +14,9 @@ public class EasyCardEventHits
 [AddComponentMenu("Easy Card Pack/Event System")]
 public class EasyCardEventSystem : MonoBehaviour
 {
-    EasyCardEventHits hits = new EasyCardEventHits();
-
-    bool hasClicked = false;
+    private EasyCardEventHits hits = new EasyCardEventHits();
+    private bool hasClicked = false;
+    private EasyCard hoveringCard = null;
 
     void Update(){
 
@@ -28,7 +29,7 @@ public class EasyCardEventSystem : MonoBehaviour
                 hasClicked = true;
             }
         }
-
+        
         if (Input.GetMouseButtonUp(0))
         {
             if (hasClicked)
@@ -38,6 +39,26 @@ public class EasyCardEventSystem : MonoBehaviour
                 hasClicked = false;
             }
         }
+            
+        hits = RayCastForCards();
+        EasyCard firstHitCard = hits.hitCards.Count != 0 ? hits.hitCards[0] : null;
+
+        if(hoveringCard != firstHitCard)
+        {
+            if(hoveringCard != null) 
+            {
+                EasyCardEvents.OnHoverExit(hoveringCard);
+                hoveringCard = null;
+            }
+
+            if(firstHitCard != null)
+            {
+                EasyCardEvents.OnHoverEnter(firstHitCard);
+                hoveringCard = firstHitCard;
+            }
+        }
+        
+
     }
 
 
