@@ -4940,7 +4940,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  _animationTime: 0.15
+  _animationTime: 0.1
   instantFlip: 1
 --- !u!114 &3717293094102607588
 MonoBehaviour:
@@ -4973,7 +4973,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d42b86d6927dbb45a2659c63f2778ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cardDefinition: {fileID: 0}
+  _cardDefinition: {fileID: 11400000, guid: cda225272a366534b96a6eede2dbbf70, type: 2}
   _faceRenderer: {fileID: 479863030111466499}
   _material: {fileID: 2100000, guid: cef592313510a014ea8b25ee3eb99c8c, type: 2}
   _backRenderer: {fileID: 4843389509360307722}
@@ -5277,6 +5277,7 @@ GameObject:
   - component: {fileID: 1565653780092935848}
   - component: {fileID: 5394450362648952804}
   - component: {fileID: 6870542401004822068}
+  - component: {fileID: 6929597880294366474}
   m_Layer: 0
   m_Name: Title
   m_TagString: Untagged
@@ -5292,7 +5293,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7232402344111274523}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.001}
+  m_LocalPosition: {x: 0, y: 0, z: -0.0010000002}
   m_LocalScale: {x: 1, y: 0.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5300,7 +5301,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.455}
+  m_AnchoredPosition: {x: 0.01599992, y: 0.399}
   m_SizeDelta: {x: 0.9, y: 0.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &5394450362648952804
@@ -5428,7 +5429,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: -0.08125919, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   _SortingLayer: 0
@@ -5437,6 +5438,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 5394450362648952804}
   m_maskType: 0
+--- !u!114 &6929597880294366474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7232402344111274523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6365088a3fde32f4cb38f0049d89950b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_radius: 1.29
+  m_TextComponent: {fileID: 6870542401004822068}
 --- !u!1 &7402402993976479010
 GameObject:
   m_ObjectHideFlags: 0
