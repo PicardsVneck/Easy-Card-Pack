@@ -111,7 +111,11 @@ public class EasyCardDragAndDrop : EasyCardEventHandler
             for (int i = 0; i < dragCards.Count; i++)
             {
                 bool canAddCard = newCardCollection.AddCard(dragCards[i], i + addCardIndex);
-                dragCards[i].EnableHighLight(false);
+                if(i != 0)
+                {
+                    dragCards[i].EnableHighLight(false);
+                }
+                
                 if(!canAddCard)
                 {
                     canAddAllCards = false;
