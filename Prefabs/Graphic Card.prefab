@@ -4843,7 +4843,7 @@ GameObject:
   - component: {fileID: 1286425107430560284}
   - component: {fileID: 4767076823983666116}
   - component: {fileID: 3717293094102607588}
-  - component: {fileID: 8143008739638514048}
+  - component: {fileID: 4433809760038444183}
   m_Layer: 0
   m_Name: Graphic Card
   m_TagString: Untagged
@@ -4961,7 +4961,7 @@ MonoBehaviour:
   _highlightBack: 1
   _backMeshRenderer: {fileID: 4843389509360307722}
   _backHighlightColor: {r: 1.4716102, g: 1.4397572, b: 1.4142748, a: 1}
---- !u!114 &8143008739638514048
+--- !u!114 &4433809760038444183
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4970,18 +4970,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1719828783534252632}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d42b86d6927dbb45a2659c63f2778ee, type: 3}
+  m_Script: {fileID: 11500000, guid: 826f26f49c5f05a48899cd8a74155403, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cardDefinition: {fileID: 11400000, guid: cda225272a366534b96a6eede2dbbf70, type: 2}
+  _cardDefinition: {fileID: 0}
   _faceRenderer: {fileID: 479863030111466499}
-  _material: {fileID: 2100000, guid: cef592313510a014ea8b25ee3eb99c8c, type: 2}
+  _material: {fileID: 2100000, guid: ed67c9ab3ae9d1a4e92f8bd6584821d3, type: 2}
   _backRenderer: {fileID: 4843389509360307722}
-  _cardBack: {fileID: -614331302, guid: f4c9f5601d2dc0b41aa9ee99aa2d83e1, type: 3}
+  _cardBack: {fileID: 21300000, guid: c6675b355c3ec4b43bae9812af5bc805, type: 3}
   _outlineRenderer: {fileID: 1694218902504120716}
   _backOutlineRenderer: {fileID: 5149826536067811109}
-  outlineMaterial: {fileID: 2100000, guid: 4a30da2b360e15f40a67b1aa9057226e, type: 2}
-  outlineWidth: 0.07
+  _outlineMaterial: {fileID: 2100000, guid: f215a313d7cc559488fafc7c590ab75f, type: 2}
+  _outlineWidth: 0.06
 --- !u!1 &3041586109864100265
 GameObject:
   m_ObjectHideFlags: 0
@@ -5128,7 +5128,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 1, y: -0, z: -0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0.002}
-  m_LocalScale: {x: 1.0280095, y: 1.0200492, z: 1}
+  m_LocalScale: {x: 1.0240082, y: 1.0171851, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6820773079977659307}
@@ -5161,7 +5161,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4a30da2b360e15f40a67b1aa9057226e, type: 2}
+  - {fileID: 2100000, guid: f215a313d7cc559488fafc7c590ab75f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5211,7 +5211,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.002}
-  m_LocalScale: {x: 1.0280095, y: 1.0200492, z: 1}
+  m_LocalScale: {x: 1.0240082, y: 1.0171851, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6820773079977659307}
@@ -5244,7 +5244,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4a30da2b360e15f40a67b1aa9057226e, type: 2}
+  - {fileID: 2100000, guid: f215a313d7cc559488fafc7c590ab75f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5301,7 +5301,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.01599992, y: 0.399}
+  m_AnchoredPosition: {x: 0.01599992, y: 0.373}
   m_SizeDelta: {x: 0.9, y: 0.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &5394450362648952804
@@ -5366,7 +5366,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Spartan Warrior
+  m_text: Spartan Phalanx
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5375,8 +5375,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4283782485
-  m_fontColor: {r: 0.3333333, g: 0.3333333, b: 0.3333333, a: 1}
+    rgba: 4292861919
+  m_fontColor: {r: 0.8742138, g: 0.8742138, b: 0.8742138, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -5409,15 +5409,17 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 0
   m_isCullingEnabled: 0
@@ -5445,12 +5447,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7232402344111274523}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6365088a3fde32f4cb38f0049d89950b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_radius: 1.29
+  m_radius: 1.3
   m_TextComponent: {fileID: 6870542401004822068}
 --- !u!1 &7402402993976479010
 GameObject:
@@ -5514,7 +5516,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: ed67c9ab3ae9d1a4e92f8bd6584821d3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

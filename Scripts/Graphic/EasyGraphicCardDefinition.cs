@@ -1,22 +1,25 @@
+using System;
 using UnityEngine;
 
 namespace EasyCardPack.Graphic
 {
 
-[CreateAssetMenu(fileName = "PlayingCardDefinition", menuName = "Easy Card Pack/Playing Card Definition", order = 1)]
+[CreateAssetMenu(fileName = "GraphicCardDefinition", menuName = "Easy Card Pack/Graphic Card Definition", order = 1)]
 public class EasyGraphicCardDefinition : EasyCardDefinition
 {
+    [SerializeField] private String _title;
     [SerializeField] private Sprite _cardFace;
     [SerializeField] public EasyCard _prefab;
 
     //accessors
+    public string title { get { return _title; } }
     public Sprite cardFace { get { return _cardFace; } }
     public EasyCard prefab { get { return _prefab; } }
 
     public override EasyCard CreateCard()
     {
         EasyCard card = Instantiate(_prefab);
-        //card.gameObject.name = $"{_rank} of {_suit}";
+        card.gameObject.name = $"{_title} Card";
 
         EasyPlayingCardURP cardURP = card.GetComponent<EasyPlayingCardURP>();
         //cardURP?.Initialize(this);

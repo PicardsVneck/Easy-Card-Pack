@@ -73,8 +73,8 @@ public class EasyPlayingCardURP : MonoBehaviour
         Vector2 tiling = new Vector2(sprite.rect.width / spriteSize.x, sprite.rect.height / spriteSize.y);
 
         newMaterial.SetTexture("_MainTex", sprite.texture);
-        newMaterial.SetVector("_Tiling", tiling);
-        newMaterial.SetVector("_Offset", offset);
+        newMaterial.SetTextureOffset("_MainTex", offset);
+        newMaterial.SetTextureScale("_MainTex", tiling);
 
         return newMaterial;
     }

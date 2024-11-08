@@ -21,8 +21,8 @@ public class EasyPlayingCardURP : MonoBehaviour
     [Header("Outline")]
     [SerializeField] private MeshRenderer _outlineRenderer;
     [SerializeField] private MeshRenderer _backOutlineRenderer;
-    [SerializeField] private Material outlineMaterial;
-    [SerializeField] private float outlineWidth = 0.01f;
+    [SerializeField] private Material _outlineMaterial;
+    [SerializeField] private float _outlineWidth = 0.01f;
 
     /*public Suit suit
     {
@@ -54,14 +54,10 @@ public class EasyPlayingCardURP : MonoBehaviour
     {
         this._cardDefinition = cardDefinition;
 
-        if (cardDefinition == null)
-        {
-            return;
-        }
-    
-        _faceRenderer.material = GetCardMaterial(cardDefinition.cardFace);
-        _backRenderer.material = GetCardMaterial(_cardBack);
+        UpdateCardFace();
+        UpdateCardBack();
         UpdateOutline();
+        
     }
 
     public Material GetCardMaterial(Sprite sprite)
@@ -73,35 +69,60 @@ public class EasyPlayingCardURP : MonoBehaviour
         Vector2 tiling = new Vector2(sprite.rect.width / spriteSize.x, sprite.rect.height / spriteSize.y);
 
         newMaterial.SetTexture("_MainTex", sprite.texture);
-        newMaterial.SetVector("_Tiling", tiling);
-        newMaterial.SetVector("_Offset", offset);
+        newMaterial.SetTextureOffset("_MainTex", offset);
+        newMaterial.SetTextureScale("_MainTex", tiling);
+        //newMaterial.SetVector("_Tiling", tiling);
+        //newMaterial.SetVector("_Offset", offset);
 
         return newMaterial;
     }
 
     private void UpdateOutline()
     {
-        if(outlineWidth <= 0)
+        if(_outlineWidth <= 0)
         {
-            _outlineRenderer.gameObject.SetActive(false);
-            _backOutlineRenderer.gameObject.SetActive(false);
+            _outlineRenderer?.gameObject.SetActive(false);
+            _backOutlineRenderer?.gameObject.SetActive(false);
             return;
         }
         else
         {
-            _outlineRenderer.gameObject.SetActive(true);
-            _backOutlineRenderer.gameObject.SetActive(true);
+            _outlineRenderer?.gameObject.SetActive(true);
+            _backOutlineRenderer?.gameObject.SetActive(true);
         }
 
         Vector3 faceScale = _faceRenderer.transform.localScale;
-        float outlineWidthX = outlineWidth / _faceRenderer.transform.lossyScale.x;
-        float outlineWidthY = outlineWidth / _faceRenderer.transform.lossyScale.y;
+        float outlineWidthX = _outlineWidth / _faceRenderer.transform.lossyScale.x;
+        float outlineWidthY = _outlineWidth / _faceRenderer.transform.lossyScale.y;
 
-        _outlineRenderer.transform.localScale = new Vector3(faceScale.x + outlineWidthX, faceScale.y + outlineWidthY, 1);
-        _backOutlineRenderer.transform.localScale = new Vector3(faceScale.x + outlineWidthX, faceScale.y + outlineWidthY, 1);
+        if(_outlineRenderer != null)
+        {
+            _outlineRenderer.transform.localScale = new Vector3(faceScale.x + outlineWidthX, faceScale.y + outlineWidthY, 1);
+            _outlineRenderer.sharedMaterial = _outlineMaterial;
+        }
 
-        _outlineRenderer.sharedMaterial = outlineMaterial;
-        _backOutlineRenderer.sharedMaterial = outlineMaterial;
+        if(_backOutlineRenderer != null)
+        {
+            _backOutlineRenderer.transform.localScale = new Vector3(faceScale.x + outlineWidthX, faceScale.y + outlineWidthY, 1);
+            _backOutlineRenderer.sharedMaterial = _outlineMaterial;
+        }
+    }
+
+    private void UpdateCardBack()
+    {
+        if(_backRenderer != null && _cardBack != null)
+        {
+            _backRenderer.material = GetCardMaterial(_cardBack);
+
+        }
+    }
+
+    private void UpdateCardFace()
+    {
+        if(_faceRenderer != null && _cardDefinition != null)
+        {
+            _faceRenderer.material = GetCardMaterial(_cardDefinition.cardFace);
+        }
     }
 
     
