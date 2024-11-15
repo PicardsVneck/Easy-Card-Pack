@@ -49,8 +49,6 @@ public class EasyCardHighlighter : MonoBehaviour
         {
             _backMeshRenderer.material.SetColor("_Background_Color", enabled ? _backHighlightColor : _faceOriginalColor);
         }
-
-        Debug.Log("Highlighting: " + enabled);
     }
 }
 

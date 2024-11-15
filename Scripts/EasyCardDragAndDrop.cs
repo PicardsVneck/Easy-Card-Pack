@@ -134,8 +134,7 @@ public class EasyCardDragAndDrop : EasyCardEventHandler
     }
 
     protected override void OnCardHoverEnter(EasyCard card)
-    {
-        
+    { 
         EasyCardCollection collection = card.Collection;
 
         if(collection == null)
@@ -165,7 +164,6 @@ public class EasyCardDragAndDrop : EasyCardEventHandler
             card.EnableHighLight(true);
             return;
         }
-        
     }
 
     protected override void OnCardHoverExit(EasyCard card)

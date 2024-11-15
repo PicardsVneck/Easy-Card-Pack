@@ -33,6 +33,8 @@ public class SolitaireTableauBehavior : EasyCardCollectionBehavior
         bool isCardNextRank = topCard52.rank == card52.rank + 1;
         bool isCardDifferentColor = isTopCardRed != isCardRed;
 
+        Debug.Log(isCardNextRank + " " + isCardDifferentColor);
+
         return isCardNextRank && isCardDifferentColor;
 
     }

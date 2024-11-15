@@ -8,11 +8,13 @@ namespace EasyCardPack.Graphic
 public class EasyGraphicCardDefinition : EasyCardDefinition
 {
     [SerializeField] private String _title;
+    [SerializeField] private String _description;
     [SerializeField] private Sprite _cardFace;
     [SerializeField] public EasyCard _prefab;
 
     //accessors
     public string title { get { return _title; } }
+    public string description { get { return _description; } }
     public Sprite cardFace { get { return _cardFace; } }
     public EasyCard prefab { get { return _prefab; } }
 
