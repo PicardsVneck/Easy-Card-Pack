@@ -9,10 +9,11 @@ namespace EasyCardPack
 public class EasyCardDragToMove : EasyCardEventHandler
 {
     EasyCard selectedCard = null;
+    List<EasyCard> selectedCards = null;
 
     void Awake()
     {
-
+        selectedCards = new List<EasyCard>();
     }
 
     void Update()
